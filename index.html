@@ -767,183 +767,513 @@
   
 <!-- ================= PROJECTS ================= -->
 
-<section id="projects"
-         class="max-w-6xl mx-auto px-6 py-20 scroll-mt-24">
 
-    <!-- Title -->
-    <div class="text-center mb-12">
 
-        <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase">
-            Selected Work
-        </p>
+<!-- ================= SELECTED PROJECTS ================= -->
 
-        <h2 class="hero-title text-4xl md:text-5xl font-bold mt-4">
-            My Projects
+<style>
+    .projects-section {
+        padding: 90px 24px;
+        max-width: 1400px;
+        margin: auto;
+        scroll-margin-top: 100px;
+    }
+
+    .projects-heading {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .projects-label {
+        display: inline-block;
+        color: #38bdf8;
+        border: 1px solid #0ea5e9;
+        border-radius: 30px;
+        padding: 8px 22px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin-bottom: 22px;
+    }
+
+    .projects-heading h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(38px, 5vw, 65px);
+        font-weight: 700;
+        color: white;
+    }
+
+    .projects-heading h2 span {
+        color: #38bdf8;
+    }
+
+    .projects-heading > p {
+        color: #94a3b8;
+        margin-top: 18px;
+        font-size: 17px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .project-showcase {
+        background: #152235;
+        border: 1px solid #26577d;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.35s ease,
+                    border-color 0.35s ease,
+                    box-shadow 0.35s ease;
+    }
+
+    .project-showcase:hover {
+        transform: translateY(-10px);
+        border-color: #38bdf8;
+        box-shadow: 0 18px 40px rgba(14, 165, 233, 0.16);
+    }
+
+    .project-visual {
+        height: 220px;
+        position: relative;
+        background: linear-gradient(135deg, #183b63, #071321);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .project-showcase:hover .project-visual img {
+        transform: scale(1.07);
+    }
+
+    .project-fallback {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 65px;
+        color: #38bdf8;
+        z-index: 0;
+    }
+
+    .project-visual img {
+        position: relative;
+        z-index: 1;
+    }
+
+    .project-body {
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .project-category {
+        color: #7dd3fc;
+        border: 1px solid #26759e;
+        border-radius: 30px;
+        padding: 7px 13px;
+        font-size: 12px;
+        width: fit-content;
+        margin-bottom: 18px;
+    }
+
+    .project-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        line-height: 1.3;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 18px;
+    }
+
+    .project-description {
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.85;
+        margin-bottom: 18px;
+    }
+
+    .project-method {
+        color: #94a3b8;
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .project-award {
+        display: inline-flex;
+        gap: 9px;
+        align-items: center;
+        color: #facc15;
+        background: rgba(234, 179, 8, 0.1);
+        border: 1px solid #ca8a04;
+        padding: 8px 15px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 13px;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .project-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: auto;
+        padding-top: 12px;
+    }
+
+    .project-tags span {
+        background: #1d3049;
+        border: 1px solid #334f6e;
+        border-radius: 30px;
+        padding: 7px 12px;
+        color: #cbd5e1;
+        font-size: 11px;
+    }
+
+    .project-link {
+        color: #7dd3fc;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 25px;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+    }
+
+    .project-link:hover {
+        color: white;
+    }
+
+    .projects-footer {
+        text-align: center;
+        margin-top: 55px;
+    }
+
+    .projects-github-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #e2e8f0;
+        color: #101827;
+        padding: 16px 28px;
+        border-radius: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    .projects-github-button:hover {
+        background: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+    }
+
+    @media (max-width: 1050px) {
+        .projects-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 700px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .project-visual {
+            height: 210px;
+        }
+
+        .project-body {
+            padding: 23px;
+        }
+
+        .projects-section {
+            padding: 70px 18px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .project-showcase,
+        .project-visual img,
+        .projects-github-button {
+            transition: none;
+        }
+    }
+</style>
+
+<section id="projects" class="projects-section">
+
+    <!-- TITLE -->
+
+    <div class="projects-heading">
+
+        <span class="projects-label">
+            SELECTED PROJECTS
+        </span>
+
+        <h2>
+            Featured <span>Projects</span>
         </h2>
 
-        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Explore my projects in Data Science,
-            Machine Learning, statistical modeling,
-            and Artificial Intelligence.
+        <p>
+            Academic challenges and applied projects in
+            Data Science, Machine Learning and AI.
         </p>
 
     </div>
 
-    <!-- Filters -->
-    <div id="project-filters"
-         class="flex flex-wrap justify-center gap-3 mb-10">
+    <!-- PROJECT CARDS -->
 
-        <button data-filter="All"
-                class="project-filter rounded-full px-5 py-2 bg-sky-400 text-slate-900 font-medium">
-            All Projects
-        </button>
+    <div class="projects-grid">
 
-        <button data-filter="Python"
-                class="project-filter rounded-full px-5 py-2 border border-slate-600 text-gray-300">
-            Python
-        </button>
+        <!-- ================================= -->
+        <!-- PROJECT 1 : SORBONNE DATA CHALLENGE -->
+        <!-- ================================= -->
 
-        <button data-filter="Jupyter Notebook"
-                class="project-filter rounded-full px-5 py-2 border border-slate-600 text-gray-300">
-            Jupyter Notebook
-        </button>
+        <article class="project-showcase">
 
-        <button data-filter="Other"
-                class="project-filter rounded-full px-5 py-2 border border-slate-600 text-gray-300">
-            Other
-        </button>
+            <div class="project-visual">
+
+                <div class="project-fallback">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <img src="cybersecurity.jpg"
+                     alt="Cybersecurity and malicious activity detection"
+                     loading="lazy"
+                     onerror="this.style.display='none'">
+
+            </div>
+
+            <div class="project-body">
+
+                <span class="project-category">
+                    Machine Learning · NLP
+                </span>
+
+                <h3 class="project-name">
+                    Sorbonne Data Challenge — Cybersecurity
+                </h3>
+
+                <p class="project-description">
+                    Detection of malicious activities through
+                    machine learning applied to cybersecurity
+                    data, as part of a challenge conducted
+                    in partnership with the French Ministry
+                    of the Interior.
+                </p>
+
+                <p class="project-method">
+                    <strong class="text-white">Approach:</strong>
+                    Text preprocessing, feature extraction
+                    using TF-IDF and dimensionality reduction,
+                    followed by supervised classification
+                    to identify malicious behaviors.
+                </p>
+
+                <div class="project-award">
+                    <i class="fa-solid fa-trophy"></i>
+                    3rd Place
+                </div>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>TF-IDF</span>
+                    <span>Classification</span>
+                    <span>Cybersecurity</span>
+                </div>
+
+                <a href="https://github.com/Ayamokht?tab=repositories"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+                    <i class="fa-brands fa-github"></i>
+                    Explore GitHub
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ================================= -->
+        <!-- PROJECT 2 : NEXIALOG x SFR -->
+        <!-- ================================= -->
+
+        <article class="project-showcase">
+
+            <div class="project-visual">
+
+                <div class="project-fallback">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <img src="telecom.jpg"
+                     alt="Telecommunications network analytics and anomaly detection"
+                     loading="lazy"
+                     onerror="this.style.display='none'">
+
+            </div>
+
+            <div class="project-body">
+
+                <span class="project-category">
+                    Anomaly Detection · Data Analytics
+                </span>
+
+                <h3 class="project-name">
+                    Nexialog × SFR — Network Anomaly Detection
+                </h3>
+
+                <p class="project-description">
+                    Identification of anomalies in
+                    telecommunications network data
+                    to support network monitoring,
+                    performance analysis and detection
+                    of unusual behavior.
+                </p>
+
+                <p class="project-method">
+                    <strong class="text-white">Approach:</strong>
+                    Data exploration, construction of
+                    network indicators, unsupervised anomaly
+                    detection with DBSCAN and development
+                    of an interactive Dash dashboard.
+                </p>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>DBSCAN</span>
+                    <span>Dash</span>
+                    <span>Clustering</span>
+                    <span>Data Visualization</span>
+                </div>
+
+                <a href="https://github.com/Ayamokht/Challenge-Nexialog-SFR"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+                    <i class="fa-brands fa-github"></i>
+                    View Project
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ================================= -->
+        <!-- PROJECT 3 : HP CHALLENGE -->
+        <!-- ================================= -->
+
+        <article class="project-showcase">
+
+            <div class="project-visual">
+
+                <div class="project-fallback">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <img src="logistics.jpg"
+                     alt="Sustainable logistics and international supply chains"
+                     loading="lazy"
+                     onerror="this.style.display='none'">
+
+            </div>
+
+            <div class="project-body">
+
+                <span class="project-category">
+                    Optimization · Data Analytics
+                </span>
+
+                <h3 class="project-name">
+                    HP Challenge — Sustainable Logistics
+                </h3>
+
+                <p class="project-description">
+                    Analysis of international logistics
+                    data to identify opportunities
+                    for operational optimization
+                    and reduction of environmental impact.
+                </p>
+
+                <p class="project-method">
+                    <strong class="text-white">Objective:</strong>
+                    Support more efficient logistics
+                    decisions by analyzing transportation
+                    and supply-chain data, with a focus
+                    on sustainability and carbon footprint.
+                </p>
+
+                <div class="project-award">
+                    <i class="fa-solid fa-trophy"></i>
+                    1st Place
+                </div>
+
+                <div class="project-tags">
+                    <span>Data Analytics</span>
+                    <span>Optimization</span>
+                    <span>Logistics</span>
+                    <span>Sustainability</span>
+                </div>
+
+                <div class="project-link">
+                    <i class="fa-solid fa-award"></i>
+                    Academic Challenge
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
-    <!-- Loading -->
-    <p id="projects-status"
-       class="text-center text-gray-400 mb-6"
-       role="status">
-        Loading GitHub projects...
-    </p>
 
-    <!-- Projects Grid -->
-    <div id="github-projects"
-         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- GITHUB BUTTON -->
+
+    <div class="projects-footer">
+
+        <a href="https://github.com/Ayamokht?tab=repositories"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="projects-github-button">
+
+            <i class="fa-brands fa-github text-xl"></i>
+
+            View More Projects on GitHub
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
     </div>
-
-
 
 </section>
 
-<!-- GITHUB PROJECTS SCRIPT -->
 
-<script>
-document.addEventListener("DOMContentLoaded", async function () {
-
-    const container = document.getElementById("github-projects");
-    const status = document.getElementById("projects-status");
-    const buttons = document.querySelectorAll(".project-filter");
-
-    if (!container || !status) return;
-
-    let repositories = [];
-
-    function getCategory(repo) {
-        if (repo.language === "Python") return "Python";
-        if (repo.language === "Jupyter Notebook") return "Jupyter Notebook";
-        return "Other";
-    }
-
-    function renderProjects(filter = "All") {
-
-        container.innerHTML = "";
-
-        const selected = repositories.filter(repo =>
-            filter === "All" || getCategory(repo) === filter
-        );
-
-        status.textContent = selected.length
-            + " public repositories";
-
-        selected.forEach(repo => {
-
-            const card = document.createElement("article");
-            card.className = "section-card p-7 flex flex-col";
-
-            const icon = document.createElement("div");
-            icon.innerHTML =
-                '<i class="fa-solid fa-code-branch text-sky-400 text-2xl"></i>';
-
-            const language = document.createElement("p");
-            language.className = "text-sky-400 text-sm mt-5";
-            language.textContent = repo.language || "GitHub Project";
-
-            const title = document.createElement("h3");
-            title.className = "text-xl font-semibold mt-3 break-words";
-            title.textContent = repo.name;
-
-            const description = document.createElement("p");
-            description.className =
-                "text-gray-400 mt-4 leading-relaxed flex-grow";
-            description.textContent =
-                repo.description || "Explore the project on GitHub.";
-
-            const link = document.createElement("a");
-            link.href = repo.html_url;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-            link.className =
-                "text-sky-400 font-medium mt-6 inline-flex items-center gap-2";
-            link.textContent = "View on GitHub ↗";
-
-            card.appendChild(icon);
-            card.appendChild(language);
-            card.appendChild(title);
-            card.appendChild(description);
-            card.appendChild(link);
-
-            container.appendChild(card);
-        });
-    }
-
-    buttons.forEach(button => {
-
-        button.addEventListener("click", function () {
-
-            buttons.forEach(b => {
-                b.classList.remove("bg-sky-400", "text-slate-900");
-                b.classList.add("border", "border-slate-600", "text-gray-300");
-            });
-
-            this.classList.add("bg-sky-400", "text-slate-900");
-            this.classList.remove("border", "border-slate-600", "text-gray-300");
-
-            renderProjects(this.dataset.filter);
-        });
-
-    });
-
-    try {
-
-        const response = await fetch(
-            "https://api.github.com/users/Ayamokht/repos?per_page=100&sort=updated"
-        );
-
-        if (!response.ok) {
-            throw new Error("GitHub API unavailable");
-        }
-
-        repositories = await response.json();
-
-        renderProjects();
-
-    } catch (error) {
-
-        status.textContent =
-            "Projects could not be loaded. Please visit my GitHub profile.";
-
-    }
-
-});
-</script>
-          
-</div>
     <!-- ================= PARTICLES ANIMATION ================= -->
 
     <script>
