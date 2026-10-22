@@ -1,120 +1,401 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Aya Mokhtar</title>
-    
-    <!-- Importation de Tailwind CSS -->
+
+    <title>Aya Mokhtar | Data Scientist & AI</title>
+
+    <meta name="description"
+          content="Portfolio of Aya Mokhtar, Data Scientist specializing in Machine Learning, Statistical Modeling and Artificial Intelligence.">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Importation de la police Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
 
-    <!-- Importation des bibliothèques -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Particles -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #101827;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        /* Animated background */
+
         #tsparticles {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
         }
+
+        /* Main content */
+
+        .page-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Elegant typography */
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -1.5px;
+        }
+
+        /* Profile picture */
+
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(125, 211, 252, 0.4);
+            box-shadow: 0 10px 45px rgba(0, 0, 0, 0.35);
+            transition: transform 0.4s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.04);
+        }
+
+        /* Entry animation */
+
+        .fade-in {
+            animation: fadeIn 1.1s ease-out both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Buttons */
+
+        .primary-button {
+            background: #e2e8f0;
+            color: #172033;
+            transition: all 0.3s ease;
+        }
+
+        .primary-button:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .secondary-button {
+            border: 1px solid #64748b;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            border-color: #7dd3fc;
+            background: rgba(125, 211, 252, 0.08);
+            transform: translateY(-3px);
+        }
+
     </style>
+
 </head>
-<body class="bg-gray-900 text-white relative">
+
+<body>
+
+    <!-- Animated background -->
+
     <div id="tsparticles"></div>
+
+    <div class="page-content">
+
+        <!-- Navigation -->
+
+        <nav class="fixed top-0 w-full z-50 bg-[#101827]/90 backdrop-blur-md border-b border-white/10">
+
+            <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+
+                <a href="index.html"
+                   class="text-lg font-bold tracking-wide text-white">
+                    Aya Mokhtar<span class="text-sky-400">.</span>
+                </a>
+
+                <div class="flex items-center gap-4 md:gap-8 text-sm md:text-base text-gray-300">
+
+                    <a href="index.html"
+                       class="hover:text-sky-400 transition">
+                        Home
+                    </a>
+
+                    <a href="about.html"
+                       class="hover:text-sky-400 transition">
+                        About
+                    </a>
+
+                    <a href="projects.html"
+                       class="hover:text-sky-400 transition">
+                        Projects
+                    </a>
+
+                    <a href="end_page.html"
+                       class="hover:text-sky-400 transition">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- HERO SECTION -->
+
+        <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-20">
+
+            <!-- Profile Picture -->
+
+            <div class="fade-in mb-8">
+
+                <img src="photo_aya.png"
+                     alt="Portrait of Aya Mokhtar"
+                     class="profile-photo">
+
+            </div>
+
+
+            <!-- Availability -->
+
+            <div class="fade-in mb-7">
+
+                <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-200 text-sm">
+
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+
+                    Open to Data Science & AI Opportunities
+
+                </span>
+
+            </div>
+
+
+            <!-- Name -->
+
+            <p class="fade-in text-gray-300 text-lg md:text-xl mb-4">
+
+                Hello, I'm Aya Mokhtar
+
+            </p>
+
+
+            <!-- Professional title -->
+
+            <h1 class="fade-in hero-title text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-5xl">
+
+                Data Scientist
+
+                <span class="block text-sky-400 mt-3">
+
+                    Machine Learning & AI
+
+                </span>
+
+            </h1>
+
+
+            <!-- Education -->
+
+            <p class="fade-in mt-8 text-gray-300 text-base md:text-lg font-medium">
+
+                MSc MoSEF
+
+                <span class="mx-2 text-sky-400">|</span>
+
+                Paris 1 Panthéon-Sorbonne
+
+            </p>
+
+
+            <!-- Professional summary -->
+
+            <p class="fade-in mt-7 max-w-3xl text-gray-400 text-base md:text-lg leading-relaxed">
+
+                Data Scientist with experience in banking and retail,
+                specializing in statistical modeling, machine learning,
+                and predictive analytics.
+
+                Combining a strong quantitative background with
+                hands-on experience in developing data-driven solutions
+                and exploring generative AI applications.
+
+            </p>
+
+
+            <!-- Action buttons -->
+
+            <div class="fade-in mt-10 flex flex-wrap justify-center gap-4">
+
+                <a href="projects.html"
+                   class="primary-button px-7 py-3 rounded-xl font-semibold">
+
+                    Explore My Projects
+
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/aya-mokhtar810b4b216"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="secondary-button px-7 py-3 rounded-xl font-semibold text-white">
+
+                    Let's Connect
+
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Social links -->
+
+            <div class="fade-in mt-9 flex items-center gap-7 text-gray-400 text-2xl">
+
+                <a href="https://github.com/Ayamokht"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub"
+                   class="hover:text-sky-400 transition">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/aya-mokhtar810b4b216"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn"
+                   class="hover:text-sky-400 transition">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+    </div>
+
+
+    <!-- Particles animation -->
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (typeof tsParticles === "undefined") {
+                return;
+            }
+
             tsParticles.load("tsparticles", {
+
                 fpsLimit: 60,
+
                 particles: {
-                    number: { value: 100, density: { enable: true, value_area: 800 } },
-                    color: { value: "#0ff0fc" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true },
-                    size: { value: 3, random: true },
-                    move: { enable: true, speed: 1, direction: "none", out_mode: "bounce" },
-                    line_linked: { enable: true, distance: 150, color: "#0ff0fc", opacity: 0.5, width: 1 }
+
+                    number: {
+                        value: 50,
+                        density: {
+                            enable: true,
+                            area: 900
+                        }
+                    },
+
+                    color: {
+                        value: "#38bdf8"
+                    },
+
+                    links: {
+                        enable: true,
+                        distance: 150,
+                        color: "#38bdf8",
+                        opacity: 0.13,
+                        width: 1
+                    },
+
+                    move: {
+                        enable: true,
+                        speed: 0.6,
+                        direction: "none",
+                        outModes: {
+                            default: "bounce"
+                        }
+                    },
+
+                    opacity: {
+                        value: 0.25
+                    },
+
+                    size: {
+                        value: {
+                            min: 1,
+                            max: 3
+                        }
+                    }
+
                 },
+
                 interactivity: {
-                    detectsOn: "canvas",
-                    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
-                    modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+
+                    events: {
+                        onHover: {
+                            enable: true,
+                            mode: "grab"
+                        }
+                    },
+
+                    modes: {
+                        grab: {
+                            distance: 130,
+                            links: {
+                                opacity: 0.35
+                            }
+                        }
+                    }
+
                 },
-                retina_detect: true
+
+                detectRetina: true
+
             });
+
         });
+
     </script>
 
-    <!-- Navigation -->
-    <nav class="bg-gray-800 shadow-md p-4 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold text-blue-400">My Portfolio</h1>
-            <ul class="flex space-x-6">
-                <li><a href="about.html" class="hover:text-blue-400">About Me</a></li>
-                <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
-                <li><a href="end_page.html" class="hover:text-orange-400">Thank You</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Section Accueil -->
-    
-<!-- Section Accueil -->
-<header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative pt-24">
-
-    <!-- Disponibilité -->
-    <div class="mb-6 px-5 py-2 rounded-full border border-blue-400/30 bg-blue-400/10 text-blue-300 text-sm">
-        ● Open to Data Science & AI Opportunities
-    </div>
-
-    <!-- Présentation -->
-    <p class="text-xl text-gray-300 mb-4">
-        Hi, I'm Aya Mokhtar 👋
-    </p>
-
-    <h2 class="text-4xl md:text-6xl font-bold leading-tight">
-        Data Scientist &
-        <span class="block text-blue-400 mt-2">
-            Machine Learning Enthusiast
-        </span>
-    </h2>
-
-    <!-- Formation -->
-    <p class="mt-6 text-gray-300 text-lg">
-        MSc in Econometrics & Statistics
-        <br>
-        Paris 1 Panthéon-Sorbonne
-    </p>
-
-    <!-- Description -->
-    <p class="mt-6 max-w-2xl text-gray-400 leading-relaxed">
-        Turning complex data into meaningful insights through
-        Machine Learning, Statistical Modeling and Artificial Intelligence.
-    </p>
-
-    <!-- Boutons -->
-    <div class="mt-8 flex flex-wrap justify-center gap-4">
-
-        <a href="projects.html"
-           class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl transition">
-            Explore My Projects ↗
-        </a>
-
-        <a href="https://www.linkedin.com/in/aya-mokhtar810b4b216"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="border border-gray-500 hover:border-blue-400 px-6 py-3 rounded-xl transition">
-            Let's Connect ↗
-        </a>
-
-    </div>
-
-</header>
+</body>
+</html>
