@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aya Mokhtar | Data Scientist & AI</title>
+    <title>Aya Mokhtar | Data Scientist | Machine Learning & AI</title>
 
     <meta name="description"
           content="Portfolio of Aya Mokhtar, Data Scientist specializing in Machine Learning, Statistical Modeling and Artificial Intelligence.">
@@ -22,11 +22,10 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Particles -->
+    <!-- Animated particles -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
 
     <style>
-
         html {
             scroll-behavior: smooth;
         }
@@ -38,8 +37,6 @@
             margin: 0;
         }
 
-        /* Animated background */
-
         #tsparticles {
             position: fixed;
             inset: 0;
@@ -47,21 +44,15 @@
             pointer-events: none;
         }
 
-        /* Main content */
-
         .page-content {
             position: relative;
             z-index: 1;
         }
 
-        /* Elegant typography */
-
         .hero-title {
             font-family: 'Playfair Display', serif;
-            letter-spacing: -1.5px;
+            letter-spacing: -1px;
         }
-
-        /* Profile picture */
 
         .profile-photo {
             width: 190px;
@@ -76,8 +67,6 @@
         .profile-photo:hover {
             transform: scale(1.04);
         }
-
-        /* Entry animation */
 
         .fade-in {
             animation: fadeIn 1.1s ease-out both;
@@ -94,8 +83,6 @@
                 transform: translateY(0);
             }
         }
-
-        /* Buttons */
 
         .primary-button {
             background: #e2e8f0;
@@ -119,130 +106,86 @@
             transform: translateY(-3px);
         }
 
-    </style>
+        .section-card {
+            background: rgba(30, 41, 59, 0.65);
+            border: 1px solid #334155;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
 
+        .section-card:hover {
+            border-color: rgba(125, 211, 252, 0.5);
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- ABOUT ME SECTION -->
-
-<section id="about"
-         class="min-h-screen max-w-6xl mx-auto px-6 py-24 scroll-mt-20">
-
-    <!-- Section Title -->
-    <div class="text-center mb-16">
-
-        <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase">
-            Get to know me
-        </p>
-
-        <h2 class="hero-title text-4xl md:text-5xl font-bold mt-4">
-            About Me
-        </h2>
-
-    </div>
-
-    <!-- Section Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-        <!-- Left Column: Image -->
-        <div class="bg-slate-800/50 border border-slate-700
-                    rounded-2xl min-h-80 flex items-center
-                    justify-center">
-
-            <p class="text-gray-400">
-                Image placeholder
-            </p>
-
-        </div>
-
-        <!-- Right Column: Text -->
-        <div class="space-y-6">
-
-            <div class="bg-slate-800/50 border border-slate-700
-                        rounded-2xl p-8">
-
-                <p class="text-gray-400">
-                    Professional introduction will go here.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- Animated background -->
-
+    <!-- ANIMATED BACKGROUND -->
     <div id="tsparticles"></div>
 
     <div class="page-content">
 
-        <!-- Navigation -->
+        <!-- ================= NAVIGATION ================= -->
 
-        
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-[#101827]/90 backdrop-blur-md border-b border-white/10">
+        <nav class="fixed top-0 w-full z-50 bg-[#101827]/95 backdrop-blur-md border-b border-white/10">
 
-    <div class="max-w-6xl mx-auto px-6 py-5 flex flex-wrap justify-between items-center gap-4">
+            <div class="max-w-6xl mx-auto px-6 py-5 flex flex-wrap justify-between items-center gap-4">
 
-        <!-- Logo -->
-        <a href="#home" class="flex items-center gap-3">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3">
 
-            <span class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 text-white font-semibold">
-                A
-            </span>
+                    <span class="w-9 h-9 flex items-center justify-center rounded-full bg-slate-700 text-white font-semibold">
+                        A
+                    </span>
 
-            <span class="text-lg font-semibold text-white">
-                Aya Mokhtar
-            </span>
+                    <span class="text-lg font-semibold text-white">
+                        Aya Mokhtar
+                    </span>
 
-        </a>
+                </a>
 
-        <!-- Navigation links -->
-        <div class="flex flex-wrap items-center gap-4 md:gap-7 text-sm text-gray-300">
+                <!-- Navigation links -->
+                <div class="flex flex-wrap items-center gap-4 md:gap-7 text-sm text-gray-300">
 
-            <a href="#home" class="hover:text-sky-400 transition">
-                Home
-            </a>
+                    <a href="#home" class="hover:text-sky-400 transition">
+                        Home
+                    </a>
 
-            <a href="#about" class="hover:text-sky-400 transition">
-                About
-            </a>
+                    <a href="#about" class="hover:text-sky-400 transition">
+                        About
+                    </a>
 
-            <a href="#education" class="hover:text-sky-400 transition">
-                Education
-            </a>
+                    <a href="#education" class="hover:text-sky-400 transition">
+                        Education
+                    </a>
 
-            <a href="#experience" class="hover:text-sky-400 transition">
-                Experience
-            </a>
+                    <a href="#experience" class="hover:text-sky-400 transition">
+                        Experience
+                    </a>
 
-            <a href="#projects" class="hover:text-sky-400 transition">
-                Projects
-            </a>
+                    <a href="#projects" class="hover:text-sky-400 transition">
+                        Projects
+                    </a>
 
-            <a href="#contact" class="hover:text-sky-400 transition">
-                Contact
-            </a>
+                    <a href="#contact" class="hover:text-sky-400 transition">
+                        Contact
+                    </a>
 
-        </div>
+                </div>
 
-    </div>
+            </div>
 
-</nav>
+        </nav>
 
 
+        <!-- ================= HOME ================= -->
 
-        <!-- HERO SECTION -->
+        <header id="home"
+                class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-40 pb-16">
 
-        <header id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-20">
-
-            <!-- Profile Picture -->
-
+            <!-- Profile picture -->
             <div class="fade-in mb-8">
 
                 <img src="photo_aya.png"
@@ -251,9 +194,7 @@
 
             </div>
 
-
             <!-- Availability -->
-
             <div class="fade-in mb-7">
 
                 <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-200 text-sm">
@@ -266,33 +207,23 @@
 
             </div>
 
-
             <!-- Name -->
-
             <p class="fade-in text-gray-300 text-lg md:text-xl mb-4">
-
                 Hello, I'm Aya Mokhtar
-
             </p>
 
-
             <!-- Professional title -->
-
             <h1 class="fade-in hero-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-5xl">
 
                 Data Scientist
 
                 <span class="block text-sky-400 mt-3">
-
                     Machine Learning & AI
-
                 </span>
 
             </h1>
 
-
             <!-- Education -->
-
             <p class="fade-in mt-8 text-gray-300 text-base md:text-lg font-medium">
 
                 MSc MoSEF
@@ -303,31 +234,26 @@
 
             </p>
 
-
             <!-- Professional summary -->
-
             <p class="fade-in mt-7 max-w-3xl text-gray-400 text-base md:text-lg leading-relaxed">
 
-                Data Scientist with experience in banking and retail,
-                specializing in statistical modeling, machine learning,
+                Data Scientist with experience in banking, retail and B2B data,
+                specializing in statistical modeling, machine learning
                 and predictive analytics.
 
                 Combining a strong quantitative background with
-                hands-on experience in developing data-driven solutions
-                and exploring generative AI applications.
+                hands-on experience in data-driven solutions
+                and generative AI applications.
 
             </p>
 
-
-            <!-- Action buttons -->
-
+            <!-- Buttons -->
             <div class="fade-in mt-10 flex flex-wrap justify-center gap-4">
 
                 <a href="projects.html"
                    class="primary-button px-7 py-3 rounded-xl font-semibold">
 
                     Explore My Projects
-
                     <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
 
                 </a>
@@ -338,16 +264,13 @@
                    class="secondary-button px-7 py-3 rounded-xl font-semibold text-white">
 
                     Let's Connect
-
                     <i class="fa-solid fa-arrow-right ml-2"></i>
 
                 </a>
 
             </div>
 
-
             <!-- Social links -->
-
             <div class="fade-in mt-9 flex items-center gap-7 text-gray-400 text-2xl">
 
                 <a href="https://github.com/Ayamokht"
@@ -373,183 +296,294 @@
             </div>
 
         </header>
-    
-<!-- PROFESSIONAL HIGHLIGHTS -->
 
-<section class="max-w-6xl mx-auto px-6 pb-24">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- ================= PROFESSIONAL HIGHLIGHTS ================= -->
 
-        <!-- Experience -->
-        <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-7 text-center hover:border-sky-400 transition duration-300">
+        <section class="max-w-6xl mx-auto px-6 pb-20">
 
-            <h3 class="text-3xl font-bold text-sky-400">
-                2
-            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-            <p class="mt-3 text-white font-semibold">
-                Professional Experiences
-            </p>
+                <div class="section-card p-7 text-center">
 
-            <p class="mt-2 text-sm text-gray-400">
-                Banking & Retail
-            </p>
+                    <h3 class="text-3xl font-bold text-sky-400">
+                        3
+                    </h3>
 
-        </div>
+                    <p class="mt-3 text-white font-semibold">
+                        Professional Experiences
+                    </p>
 
-        <!-- Education -->
-        <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-7 text-center hover:border-sky-400 transition duration-300">
+                    <p class="mt-2 text-sm text-gray-400">
+                        Banking, Retail & B2B
+                    </p>
 
-            <h3 class="text-3xl font-bold text-sky-400">
-                MSc
-            </h3>
+                </div>
 
-            <p class="mt-3 text-white font-semibold">
-                MoSEF Graduate
-            </p>
+                <div class="section-card p-7 text-center">
 
-            <p class="mt-2 text-sm text-gray-400">
-                Paris 1 Panthéon-Sorbonne
-            </p>
+                    <h3 class="text-3xl font-bold text-sky-400">
+                        MSc
+                    </h3>
 
-        </div>
+                    <p class="mt-3 text-white font-semibold">
+                        MoSEF Graduate
+                    </p>
 
-        <!-- Projects -->
-        <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-7 text-center hover:border-sky-400 transition duration-300">
+                    <p class="mt-2 text-sm text-gray-400">
+                        Paris 1 Panthéon-Sorbonne
+                    </p>
 
-            <h3 class="text-3xl font-bold text-sky-400">
-                ML & AI
-            </h3>
+                </div>
 
-            <p class="mt-3 text-white font-semibold">
-                Technical Projects
-            </p>
+                <div class="section-card p-7 text-center">
 
-            <p class="mt-2 text-sm text-gray-400">
-                Predictive Modeling & GenAI
-            </p>
+                    <h3 class="text-3xl font-bold text-sky-400">
+                        ML & AI
+                    </h3>
 
-        </div>
+                    <p class="mt-3 text-white font-semibold">
+                        Technical Projects
+                    </p>
 
-        <!-- Certification -->
-        <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-7 text-center hover:border-sky-400 transition duration-300">
+                    <p class="mt-2 text-sm text-gray-400">
+                        Predictive Modeling & GenAI
+                    </p>
 
-            <h3 class="text-3xl font-bold text-sky-400">
-                AZ-900
-            </h3>
+                </div>
 
-            <p class="mt-3 text-white font-semibold">
-                Microsoft Certified
-            </p>
+                <div class="section-card p-7 text-center">
 
-            <p class="mt-2 text-sm text-gray-400">
-                Azure Fundamentals
-            </p>
+                    <h3 class="text-3xl font-bold text-sky-400">
+                        AZ-900
+                    </h3>
 
-        </div>
+                    <p class="mt-3 text-white font-semibold">
+                        Microsoft Certified
+                    </p>
 
-    </div>
+                    <p class="mt-2 text-sm text-gray-400">
+                        Azure Fundamentals
+                    </p>
 
-</section>
+                </div>
 
-<!-- EDUCATION SECTION -->
+            </div>
 
-<section id="education"
-         class="min-h-screen max-w-6xl mx-auto px-6 py-24 scroll-mt-24">
+        </section>
 
-    <!-- Section heading -->
-    <div class="text-center mb-16">
 
-        <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase">
-            Academic Background
-        </p>
+        <!-- ================= ABOUT ME ================= -->
 
-        <h2 class="hero-title text-4xl md:text-5xl font-bold mt-4">
-            Education
-        </h2>
+        <section id="about"
+                 class="max-w-6xl mx-auto px-6 py-20 scroll-mt-24">
 
-        <p class="text-gray-400 mt-4">
-            Academic journey & qualifications
-        </p>
+            <!-- Heading -->
+            <div class="text-center mb-12">
 
-    </div>
-
-    <!-- Education timeline -->
-    <div class="max-w-3xl mx-auto border-l-2 border-slate-700 pl-8 space-y-12">
-
-        <!-- Master 2 -->
-        <div class="relative">
-
-            <span class="absolute -left-[43px] top-2 w-5 h-5
-                         bg-sky-400 rounded-full border-4 border-[#101827]">
-            </span>
-
-            <p class="text-sky-400 text-sm font-medium mb-3">
-                2024 – 2025
-            </p>
-
-            <div class="bg-slate-800/60 border border-slate-700
-                        rounded-2xl p-7 hover:border-sky-400/50 transition">
-
-                <h3 class="text-xl font-semibold text-white">
-                    Master's Degree (M2) — MoSEF
-                </h3>
-
-                <p class="text-gray-300 mt-2">
-                    Statistical, Economic & Financial Modeling
+                <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase">
+                    Get to Know Me
                 </p>
 
-                <p class="text-gray-400 mt-4">
-                    <i class="fa-solid fa-graduation-cap text-sky-400 mr-2"></i>
-                    Université Paris 1 Panthéon-Sorbonne
+                <h2 class="hero-title text-4xl md:text-5xl font-bold mt-4">
+                    About Me
+                </h2>
+
+            </div>
+
+            <!-- Professional introduction -->
+            <div class="max-w-4xl mx-auto text-center">
+
+                <h3 class="text-xl md:text-2xl font-semibold text-white mb-7">
+                    From Statistical Modeling to Intelligent Data Solutions
+                </h3>
+
+                <p class="text-gray-300 leading-8 mb-6">
+
+                    I graduated from the Master MoSEF in Statistical,
+                    Economic and Financial Modeling at
+                    Paris 1 Panthéon-Sorbonne University.
+
+                    My academic background combines econometrics,
+                    statistics and machine learning,
+                    with a strong focus on quantitative analysis
+                    and predictive modeling.
+
+                </p>
+
+                <p class="text-gray-300 leading-8 mb-6">
+
+                    Through my professional experiences at
+                    Crédit Mutuel Factoring, METRO France
+                    and a B2B startup, I have worked on
+                    credit risk scoring, customer segmentation
+                    and data enrichment.
+
+                    These projects allowed me to contribute
+                    to different stages of the data lifecycle,
+                    from preparation and analysis
+                    to modeling and business-oriented solutions.
+
+                </p>
+
+                <p class="text-gray-300 leading-8">
+
+                    Alongside my experience in traditional
+                    data science, I am developing my skills
+                    in generative AI, including large language
+                    models, retrieval-augmented generation
+                    and AI-powered applications.
+
                 </p>
 
             </div>
 
-        </div>
+            <!-- Areas of expertise -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
 
-        <!-- Master 1 -->
-        <div class="relative">
+                <div class="section-card p-7 text-center">
 
-            <span class="absolute -left-[43px] top-2 w-5 h-5
-                         bg-sky-400 rounded-full border-4 border-[#101827]">
-            </span>
+                    <i class="fa-solid fa-chart-line text-sky-400 text-3xl mb-5"></i>
 
-            <p class="text-sky-400 text-sm font-medium mb-3">
-                2023 – 2024
-            </p>
+                    <h4 class="text-lg font-semibold text-white mb-3">
+                        Statistical Modeling
+                    </h4>
 
-            <div class="bg-slate-800/60 border border-slate-700
-                        rounded-2xl p-7 hover:border-sky-400/50 transition">
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Econometrics, statistical analysis
+                        and predictive risk modeling.
+                    </p>
 
-                <h3 class="text-xl font-semibold text-white">
-                    Master's Degree (M1)
-                </h3>
+                </div>
 
-                <p class="text-gray-300 mt-2">
-                    Econometrics & Statistics
+                <div class="section-card p-7 text-center">
+
+                    <i class="fa-solid fa-brain text-sky-400 text-3xl mb-5"></i>
+
+                    <h4 class="text-lg font-semibold text-white mb-3">
+                        Machine Learning
+                    </h4>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Classification, clustering,
+                        feature engineering and model evaluation.
+                    </p>
+
+                </div>
+
+                <div class="section-card p-7 text-center">
+
+                    <i class="fa-solid fa-robot text-sky-400 text-3xl mb-5"></i>
+
+                    <h4 class="text-lg font-semibold text-white mb-3">
+                        Generative AI
+                    </h4>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        LLMs, RAG architectures,
+                        embeddings and AI applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EDUCATION ================= -->
+
+        <section id="education"
+                 class="max-w-6xl mx-auto px-6 py-24 scroll-mt-24">
+
+            <!-- Heading -->
+            <div class="text-center mb-16">
+
+                <p class="text-sky-400 text-sm font-semibold tracking-widest uppercase">
+                    Academic Background
                 </p>
 
+                <h2 class="hero-title text-4xl md:text-5xl font-bold mt-4">
+                    Education
+                </h2>
+
                 <p class="text-gray-400 mt-4">
-                    <i class="fa-solid fa-graduation-cap text-sky-400 mr-2"></i>
-                    Université Paris 1 Panthéon-Sorbonne
+                    Academic journey & qualifications
                 </p>
 
             </div>
 
-        </div>
+            <!-- Timeline -->
+            <div class="max-w-3xl mx-auto border-l-2 border-slate-700 pl-8 space-y-12">
+
+                <!-- Master 2 -->
+                <div class="relative">
+
+                    <span class="absolute -left-[43px] top-2 w-5 h-5 bg-sky-400 rounded-full border-4 border-[#101827]"></span>
+
+                    <p class="text-sky-400 text-sm font-medium mb-3">
+                        2024 – 2025
+                    </p>
+
+                    <div class="section-card p-7">
+
+                        <h3 class="text-xl font-semibold text-white">
+                            Master's Degree (M2) — MoSEF
+                        </h3>
+
+                        <p class="text-gray-300 mt-2">
+                            Statistical, Economic & Financial Modeling
+                        </p>
+
+                        <p class="text-gray-400 mt-4">
+                            <i class="fa-solid fa-graduation-cap text-sky-400 mr-2"></i>
+                            Université Paris 1 Panthéon-Sorbonne
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Master 1 -->
+                <div class="relative">
+
+                    <span class="absolute -left-[43px] top-2 w-5 h-5 bg-sky-400 rounded-full border-4 border-[#101827]"></span>
+
+                    <p class="text-sky-400 text-sm font-medium mb-3">
+                        2023 – 2024
+                    </p>
+
+                    <div class="section-card p-7">
+
+                        <h3 class="text-xl font-semibold text-white">
+                            Master's Degree (M1)
+                        </h3>
+
+                        <p class="text-gray-300 mt-2">
+                            Econometrics & Statistics
+                        </p>
+
+                        <p class="text-gray-400 mt-4">
+                            <i class="fa-solid fa-graduation-cap text-sky-400 mr-2"></i>
+                            Université Paris 1 Panthéon-Sorbonne
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Experience, Projects and Contact will be added here -->
 
     </div>
 
-</section>
 
-    </div>
-
-
-    <!-- Particles animation -->
+    <!-- ================= PARTICLES ANIMATION ================= -->
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
 
             if (typeof tsParticles === "undefined") {
@@ -629,7 +663,6 @@
             });
 
         });
-
     </script>
 
 </body>
